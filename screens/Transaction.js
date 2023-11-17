@@ -77,7 +77,7 @@ export default class TransactionScreen extends Component {
       this.setState({ bookId: "", studentId: "" });
       // Apenas para usuários do Android
       // ToastAndroid.show("O livro não existe no banco de dados da biblioteca!", ToastAndroid.SHORT);
-      Alert.alert("O livro não existe no banco de dados da biblioteca!");
+      alert("O livro não existe no banco de dados da biblioteca!");
     } else if (transactionType === "issue") {
       var isEligible = await this.checkStudentEligibilityForBookIssue(
         studentId
@@ -89,7 +89,7 @@ export default class TransactionScreen extends Component {
       }
       // For Android users only
       // ToastAndroid.show("Livro devolvido à biblioteca!", ToastAndroid.SHORT);
-      Alert.alert("Livro devolvido à biblioteca!");
+     alert("Livro devolvido à biblioteca!");
     } else {
       var isEligible = await this.checkStudentEligibilityForBookReturn(
         bookId,
@@ -102,7 +102,7 @@ export default class TransactionScreen extends Component {
       }
       // For Android users only
       // ToastAndroid.show("Livro devolvido à biblioteca!", ToastAndroid.SHORT);
-      Alert.alert("Livro devolvido à biblioteca!");
+      alert("Livro devolvido à biblioteca!");
     }
   };
 
